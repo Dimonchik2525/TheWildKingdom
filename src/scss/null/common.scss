@@ -17,12 +17,14 @@
       width: 100%;
       height: 100%;
       opacity: 0.5;
+      z-index: 3;
       background: url('@img/gold__bg.png') no-repeat;
    }
 
    button {
+      background: transparent;
       position: relative;
-      z-index: 2;
+      z-index: 5;
       font-weight: 300;
       line-height: 156%;
       text-align: center;
