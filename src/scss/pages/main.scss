@@ -1,0 +1,39 @@
+//!! About block ===============================================
+.about {
+   &__container {}
+
+   &__block {}
+
+   &__top {
+      &__img {
+         &__wrapper {
+            img {}
+         }
+      }
+
+      &__text {
+         &__title {}
+
+         &__subtitle {}
+
+         &__qoute {}
+
+         &__mainText {}
+
+         &__button {
+            button {}
+         }
+      }
+   }
+
+   &__services {
+      &__item {
+         &__img {
+            img {}
+         }
+
+         &__title {}
+      }
+   }
+
+}

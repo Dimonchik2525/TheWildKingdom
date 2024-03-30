@@ -1,1 +1,57 @@
 // Заголовки, общие БЄМ блоки и проче...
+.bg-gold {
+   position: relative;
+   max-width: rem(137);
+   height: rem(46);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
+   overflow: hidden;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      background: url('@img/gold__bg.png') no-repeat;
+   }
+
+   button {
+      position: relative;
+      z-index: 2;
+      font-weight: 300;
+      line-height: 156%;
+      text-align: center;
+   }
+}
+
+.bg-img {
+   position: relative;
+   @include adaptiveValue("width", 140, 100);
+   @include adaptiveValue("height", 140, 100);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   overflow: hidden;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      background: url('@img/gold__bg.png') no-repeat;
+   }
+
+   img {
+      position: relative;
+      z-index: 2;
+   }
+}
