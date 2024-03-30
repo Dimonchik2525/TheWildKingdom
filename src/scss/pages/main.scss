@@ -206,6 +206,16 @@
          column-gap: rem(7);
          justify-content: space-between;
 
+         div {
+            cursor: pointer;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+
          &__title {
             font-family: "Italiana";
             line-height: math.div(28, 24);
@@ -216,4 +226,32 @@
          }
       }
    }
+}
+
+//!! Services block ==========================================
+
+.services {
+   &__container {}
+
+   &__block {}
+
+   &__img {
+      img {}
+   }
+
+   &__text {
+      &__title {}
+
+      &__subtitle {}
+
+      &__qoute {}
+
+      &__mainText {}
+
+      &__button {
+         button {}
+      }
+   }
+
+   &__bg {}
 }
