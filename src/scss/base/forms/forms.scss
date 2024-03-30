@@ -1,19 +1,19 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+	&__row {}
+
+	&__column {}
+
+	&__line {}
+
+	&__input {}
+
+	&__button {}
+
+	&__error {}
 }
+
 //</FORM>
 
 // <BUTTONS>
@@ -38,7 +38,7 @@
 
 // <RATING>
 // Снипет (HTML): rating
-// @import "rating";
+@import "rating";
 
 // <QUANTITY>
 // Снипет (HTML): qa

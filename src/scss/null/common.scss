@@ -55,3 +55,52 @@
       z-index: 2;
    }
 }
+
+
+//?? Pattern for text block
+/*<div class="about__top__text pattern-block">
+                        <div class="about__top__text__title  pattern-block__title">About us</div>
+                        <div class="about__top__text__subtitle pattern-block__subtitle">Treating pet like Royalty</div>
+                        <blockquote class="about__top__text__qoute pattern-block__qoute">“They’re not just pets, they’re family”</blockquote>
+                        <div class="about__top__text__mainText pattern-block__mainText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                           Cras aliquam mi id augue ultrices, in tempus elit tristique. Aliquam ultrices sem non.</div>
+                        <div class="about__top__text__button bg-gold pattern-block__button">
+                           <button>Explore</button>
+                        </div>
+                     </div>*/
+
+.pattern-block {
+   display: flex;
+   flex-direction: column;
+   @include adaptiveValue("row-gap", 20, 15);
+
+   &__title {
+      line-height: 156%;
+      text-transform: capitalize;
+      min-height: rem(30);
+   }
+
+   &__subtitle {
+      font-family: "Italiana";
+      @include adaptiveValue("font-size", 48, 24);
+      text-transform: capitalize;
+      color: $goldColor;
+      @include adaptiveValue("line-height", 57, 25);
+   }
+
+   &__qoute {
+      font-style: italic;
+      line-height: 156%;
+      min-height: rem(27);
+   }
+
+   &__mainText {
+      max-width: rem(458);
+      line-height: 156%;
+      min-height: rem(81);
+   }
+
+   &__button {
+      height: rem(50);
+   }
+}
