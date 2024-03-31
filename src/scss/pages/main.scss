@@ -339,6 +339,49 @@
    }
 }
 
+//!! Contacts block ==========================================
+
+.contacts {
+   &__container {}
+
+   &__block {}
+
+   &__images {
+      &__top {
+         img {}
+      }
+
+      &__bottom {
+         img {}
+      }
+
+      &__button {
+         &__wrapper {
+            svg {}
+         }
+      }
+   }
+
+   &__text {
+      &__title {}
+
+      &__subtitle {}
+
+      &__workingHours {
+         svg {}
+
+         &__item {}
+      }
+
+      &__location {
+         svg {}
+
+         &__item {}
+      }
+   }
+}
+
+
 //!! Quotes block =============================================
 
 .quotes {
@@ -353,6 +396,8 @@
 
       &__controll {
          svg {
+            position: absolute;
+            top: 50%;
             cursor: pointer;
             @include adaptiveValue("width", 74, 35);
             @include adaptiveValue("height", 33, 25);
@@ -360,15 +405,11 @@
          }
 
          &__left {
-            position: absolute;
-            top: 50%;
             left: 0;
             transform: translateY(-50%);
          }
 
          &__right {
-            position: absolute;
-            top: 50%;
             right: 0;
             transform: translateY(-50%) scaleX(-1);
          }
