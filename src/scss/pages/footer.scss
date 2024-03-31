@@ -1,0 +1,29 @@
+.footer {
+   &__container {}
+
+   &__block {}
+
+   &__bottom {}
+
+   &__socials {
+      &__title {}
+
+      &__subtitles {}
+
+      &__subtitle {}
+   }
+
+   &__logo {
+      svg {}
+   }
+
+   &__text {
+      &__title {}
+
+      &__form {
+         input {}
+
+         button {}
+      }
+   }
+}
