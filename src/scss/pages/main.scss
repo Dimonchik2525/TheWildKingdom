@@ -338,3 +338,23 @@
       }
    }
 }
+
+//!! Quotes block =============================================
+
+.quotes {
+   &__container {}
+
+   &__slider {}
+
+   &__wrapper {}
+
+   &__slide {
+      &__img {
+         img {}
+      }
+
+      &__text {}
+
+      &__title {}
+   }
+}
