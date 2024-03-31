@@ -9,7 +9,7 @@
 
 <body>
    <div class="wrapper">
-      <header class="header"></header>
+      <header id="home" class="header"></header>
       <main class="main">
          <section class="about">
             <div class="about__container">
@@ -337,21 +337,21 @@
                   <div class="footer__text__title">
                      Treating all the pets present here like royalty.
                   </div>
-                  <div class="footer__text__form">
-                     <input type="email" placeholder="Enter email address">
-                     <button>Subscribe</button>
-                  </div>
+                  <form class="footer__text__form">
+                     <input class="input-footer" type="email" placeholder="Enter email address">
+                     <button type="button">Subscribe</button>
+                  </form>
                </div>
             </div>
             <div class="footer__bottom">
                Copyright Dotcreativemarket
             </div>
          </div>
-         <div hidden class="footer__arrow">
+         <a href="#" data-goto="#home" class="footer__arrow">
             <svg class="svg-svg-arrow-dims">
                <use xlink:href="img/icons/icons.svg#svg-arrow"></use>
             </svg>
-         </div>
+         </a>
       </footer>
    </div>
 </body>

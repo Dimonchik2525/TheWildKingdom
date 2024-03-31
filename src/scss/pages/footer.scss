@@ -1,29 +1,204 @@
 .footer {
-   &__container {}
+   background-color: #222220;
+   position: relative;
+   z-index: 2;
 
-   &__block {}
+   &::before,
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: url('@img/footer/footer__bg.png') 0 0/cover no-repeat;
 
-   &__bottom {}
+      @media (max-width:610px) {
+         opacity: 0.5;
+      }
+   }
+
+   &::before {
+      content: '';
+      left: 0;
+   }
+
+   &::after {
+      content: '';
+      right: 0;
+      transform: rotate(-180deg);
+   }
+
+   &__arrow {
+      z-index: 3;
+      position: absolute;
+      @include adaptiveValue("top", 224, 20, 1800, 1200, 1);
+      right: 0;
+
+      svg {
+         fill: $secondGold;
+         @include adaptiveValue("width", 73, 35);
+         @include adaptiveValue("height", 33, 25);
+         transform: rotate(90deg);
+      }
+   }
+
+   &__container {
+      position: relative;
+      z-index: 2;
+   }
+
+   &__block {
+      @include adaptiveValue("padding-top", 92, 30);
+      @include adaptiveValue("padding-bottom", 45, 20);
+      border-bottom: rem(1) solid $secondGold;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: rem(15);
+
+      @media (max-width:610px) {
+         row-gap: rem(25);
+         grid-template: repeat(3, auto)/auto;
+         justify-content: center;
+      }
+   }
+
+   &__bottom {
+      text-align: center;
+      @include adaptiveValue("padding-top", 42, 21);
+      @include adaptiveValue("padding-bottom", 35, 17);
+      color: $secondGold;
+      line-height: 187%;
+   }
 
    &__socials {
-      &__title {}
+      padding-top: rem(9);
+      color: $secondGold;
 
-      &__subtitles {}
+      &__title {
+         font-family: "Italiana";
+         font-size: rem(20);
+         text-transform: capitalize;
+         padding-bottom: rem(15);
+      }
 
-      &__subtitle {}
+      &__subtitles {
+         @include adaptiveValue("padding-bottom", 39, 20);
+         font-weight: 300;
+         display: flex;
+         @include adaptiveValue("column-gap", 50, 18, 1600, 800, 1);
+         flex-wrap: wrap;
+      }
+
+      &__subtitle {
+         line-height: 156%;
+      }
+
+      &__img {
+         display: flex;
+         @include adaptiveValue("column-gap", 41, 15, 1572, 600, 1);
+
+         svg {
+            fill: $secondGold;
+            width: rem(24);
+            height: rem(24);
+         }
+      }
+
+      @media (max-width:610px) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
    }
 
    &__logo {
-      svg {}
+      @include adaptiveValue("padding-left", 132, 25, 1600, 650, 1);
+      @include adaptiveValue("padding-right", 132, 25, 1600, 650, 1);
+      @include adaptiveValue("padding-top", 29, 15);
+      @include adaptiveValue("padding-bottom", 28, 15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: rem(1) solid $secondGold;
+      border-right: rem(1) solid $secondGold;
+
+      svg {
+         @include adaptiveValue("width", 287, 130);
+         @include adaptiveValue("height", 103, 70);
+         fill: $secondGold;
+      }
+
+      @media (max-width:610px) {
+         border-top: rem(1) solid $secondGold;
+         border-bottom: rem(1) solid $secondGold;
+         border-left: rem(0) solid $secondGold;
+         border-right: rem(0) solid $secondGold;
+      }
    }
 
    &__text {
-      &__title {}
+      padding-top: rem(10);
+      max-width: rem(347);
+      color: $secondGold;
+      text-transform: capitalize;
+      text-align: center;
+
+      &__title {
+         font-family: "Italiana";
+         padding-bottom: rem(25.84);
+         line-height: math.div(38, 32);
+         @include adaptiveValue("font-size", 32, 24);
+      }
 
       &__form {
-         input {}
+         position: relative;
+         color: $secondGold;
+         font-size: rem(16);
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         column-gap: rem(15);
+         row-gap: rem(7);
+         padding-bottom: rem(5);
 
-         button {}
+         input {
+            color: $secondGold;
+            line-height: 187%;
+            height: rem(36.14);
+            flex: 1 1 auto;
+            background-color: #222220;
+            border-radius: 5px;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  border: rem(0.5) solid $secondGold;
+               }
+            }
+         }
+
+         button {
+            line-height: 187%;
+            text-align: center;
+         }
+
+         &::after {
+            content: '';
+
+            @media (min-width:610px) {
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               height: rem(0);
+               width: 100%;
+               border-bottom: rem(1) solid $secondGold;
+               max-width: rem(333);
+            }
+         }
+      }
+
+      @media (min-width:610px) {
+         justify-self: end;
+         text-align: left;
       }
    }
 }
