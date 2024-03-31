@@ -339,6 +339,26 @@
    }
 }
 
+//!! Images__block =========================================
+
+.images {
+   &__container {}
+
+   &__block {}
+
+   &__item {
+      &__img {
+         img {}
+      }
+
+      &__text {
+         &__title {}
+
+         &__arrow {}
+      }
+   }
+}
+
 //!!bg__block ============================================
 .bg__block {
    background-color: $secondGold;
