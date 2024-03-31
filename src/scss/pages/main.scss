@@ -342,19 +342,64 @@
 //!! Quotes block =============================================
 
 .quotes {
+   @include adaptiveValue("padding-bottom", 159, 35);
+
    &__container {}
 
-   &__slider {}
+   &__slider {
+      position: relative;
+      @include adaptiveValue("padding-left", 120, 45);
+      @include adaptiveValue("padding-right", 120, 45);
+
+      &__controll {
+         svg {
+            cursor: pointer;
+            @include adaptiveValue("width", 74, 35);
+            @include adaptiveValue("height", 33, 25);
+            fill: $goldColor;
+         }
+
+         &__left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+         }
+
+         &__right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) scaleX(-1);
+         }
+      }
+   }
 
    &__wrapper {}
 
    &__slide {
+      display: flex;
+      flex-direction: column;
+      @include adaptiveValue("row-gap", 50, 15);
+      align-items: center;
+
       &__img {
          img {}
       }
 
-      &__text {}
+      &__text {
+         @include adaptiveValue("font-size", 30, 20);
+         line-height: 167%;
+         text-align: center;
+      }
 
-      &__title {}
+      &__title {
+         font-family: "Italiana";
+         @include adaptiveValue("font-size", 48, 26);
+         text-transform: capitalize;
+         text-align: center;
+         color: $goldColor;
+         line-height: 57px;
+      }
    }
 }
