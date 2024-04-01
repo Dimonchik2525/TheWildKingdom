@@ -31,10 +31,18 @@
    &__arrow {
       z-index: 3;
       position: absolute;
-      @include adaptiveValue("top", 224, 20, 1800, 1200, 1);
+      @include adaptiveValue("top", 224, 25, 1900, 1600, 1);
       right: 0;
 
       svg {
+         transition: all 0.8s ease 0s;
+
+         @media (any-hover: hover) {
+            &:hover {
+               transform: rotate(90deg) scale(1.1);
+            }
+         }
+
          fill: $secondGold;
          @include adaptiveValue("width", 73, 35);
          @include adaptiveValue("height", 33, 25);
@@ -74,7 +82,17 @@
       padding-top: rem(9);
       color: $secondGold;
 
+      a {
+
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+
       &__title {
+         display: inline-block;
          font-family: "Italiana";
          font-size: rem(20);
          text-transform: capitalize;
@@ -98,6 +116,14 @@
          @include adaptiveValue("column-gap", 41, 15, 1572, 600, 1);
 
          svg {
+            transition: all 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  fill: rgb(244, 230, 207);
+               }
+            }
+
             fill: $secondGold;
             width: rem(24);
             height: rem(24);
@@ -177,6 +203,18 @@
          }
 
          button {
+            @media (any-hover: hover) {
+               &:hover {
+                  border: rem(1) solid $goldColor;
+                  color: white;
+                  background-color: $goldColor;
+               }
+            }
+
+            border-radius: rem(10);
+            transition: all 0.5s ease 0s;
+            padding: rem(0) rem(3);
+            height: rem(36.14);
             line-height: 187%;
             text-align: center;
          }

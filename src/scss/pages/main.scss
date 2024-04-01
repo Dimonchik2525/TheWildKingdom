@@ -344,17 +344,98 @@
 .images {
    &__container {}
 
-   &__block {}
+   &__block {
+      display: grid;
+      grid-template: 1fr /1fr 12.34% 1fr;
+      grid-auto-rows: 1fr;
+      column-gap: rem(35);
+      @include adaptiveValue("row-gap", 126, 35, 1800, 1200, 1);
+
+      //min-height: 100%;
+      @media (max-width:460px) {
+         grid-template: 1fr/1fr;
+      }
+   }
 
    &__item {
+      @media (min-width:460px) {
+         &:nth-of-type(4n - 3) {
+            grid-column: 1/2;
+         }
+
+         &:nth-of-type(4n - 2) {
+            justify-self: end;
+            grid-column: 2/4;
+         }
+
+         &:nth-of-type(4n - 1) {
+            grid-column: 1/3;
+         }
+
+         &:nth-of-type(4n) {
+            justify-self: end;
+            grid-column: 3/4;
+         }
+      }
+
+      &:nth-of-type(4n - 3),
+      &:nth-of-type(4n) {
+         max-width: rem(592);
+
+         .images__item__img {
+
+            img {
+               @media (min-width:460px) {
+                  @include adaptiveValue("height", 593, 220, 1200, 460, 1);
+               }
+
+               height: rem(320);
+            }
+         }
+      }
+
+      &:nth-of-type(4n - 2),
+      &:nth-of-type(4n - 1) {
+         max-width: rem(786);
+
+         .images__item__img {
+
+            img {
+               @media (min-width:460px) {
+                  @include adaptiveValue("height", 675, 280, 1200, 460, 1);
+               }
+
+               height: rem(320);
+            }
+         }
+      }
+
       &__img {
-         img {}
+
+         img {
+            width: 100%;
+         }
       }
 
       &__text {
-         &__title {}
+         @include adaptiveValue("padding-top", 52, 25);
+         display: flex;
+         justify-content: space-between;
+         column-gap: rem(10);
 
-         &__arrow {}
+         &__title {
+            font-family: "Italiana";
+            color: $goldColor;
+            @include adaptiveValue("font-size", 32, 20);
+            line-height: math.div(38, 32);
+         }
+
+         &__arrow {
+            fill: $goldColor;
+            width: rem(53);
+            height: rem(24);
+            transform: scale(-1);
+         }
       }
    }
 }
@@ -518,6 +599,7 @@
 
       &__controll {
          svg {
+            transition: all 0.8s ease 0s;
             position: absolute;
             top: 50%;
             cursor: pointer;
@@ -529,11 +611,23 @@
          &__left {
             left: 0;
             transform: translateY(-50%);
+
+            @media (any-hover: hover) {
+               &:hover {
+                  transform: scale(1.1) translateY(-50%);
+               }
+            }
          }
 
          &__right {
             right: 0;
-            transform: translateY(-50%) scaleX(-1);
+            transform: translateY(-50%) rotate(-180deg);
+
+            @media (any-hover: hover) {
+               &:hover {
+                  transform: scale(1.1) translateY(-50%) rotate(-180deg);
+               }
+            }
          }
       }
    }

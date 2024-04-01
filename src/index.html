@@ -9,7 +9,18 @@
 
 <body>
    <div class="wrapper">
-      <header id="home" class="header"></header>
+      <header id="home" class="header">
+         <div class="header__container">
+            <div class="header__menu menu">
+               <button type="button" class="menu__icon icon-menu"><span></span></button>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li class="menu__item"><a href="" class="menu__link"></a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
       <main class="main">
          <section class="about">
             <div class="about__container">
@@ -476,26 +487,32 @@
          <div class="footer__container">
             <div class="footer__block">
                <div class="footer__socials">
-                  <div class="footer__socials__title">Sitemap</div>
+                  <a href="#" class="footer__socials__title">Sitemap</a>
                   <ul class="footer__socials__subtitles">
-                     <li class="footer__socials__subtitle">Home </li>
-                     <li class="footer__socials__subtitle">About</li>
-                     <li class="footer__socials__subtitle">Products</li>
-                     <li class="footer__socials__subtitle">Services</li>
+                     <li class="footer__socials__subtitle"><a href="#">Home</a> </li>
+                     <li class="footer__socials__subtitle"><a href="#">About</a> </li>
+                     <li class="footer__socials__subtitle"><a href="#">Products</a> </li>
+                     <li class="footer__socials__subtitle"><a href="#">Services</a> </li>
                   </ul>
                   <div class="footer__socials__img">
-                     <svg class="svg-svg-twitter-dims">
-                        <use xlink:href="img/icons/icons.svg#svg-twitter"></use>
-                     </svg>
-                     <svg class="svg-svg-insta-dims">
-                        <use xlink:href="img/icons/icons.svg#svg-insta"></use>
-                     </svg>
-                     <svg class="svg-svg-tik-tok-dims">
-                        <use xlink:href="img/icons/icons.svg#svg-tik-tok"></use>
-                     </svg>
-                     <svg class="svg-svg-medium-dims">
-                        <use xlink:href="img/icons/icons.svg#svg-medium"></use>
-                     </svg>
+                     <a href="#">
+                        <svg class="svg-svg-twitter-dims">
+                           <use xlink:href="img/icons/icons.svg#svg-twitter"></use>
+                        </svg>
+                     </a>
+                     <a href="#"><svg class="svg-svg-insta-dims">
+                           <use xlink:href="img/icons/icons.svg#svg-insta"></use>
+                        </svg></a>
+                     <a href="#">
+                        <svg class="svg-svg-tik-tok-dims">
+                           <use xlink:href="img/icons/icons.svg#svg-tik-tok"></use>
+                        </svg>
+                     </a>
+                     <a href="#">
+                        <svg class="svg-svg-medium-dims">
+                           <use xlink:href="img/icons/icons.svg#svg-medium"></use>
+                        </svg>
+                     </a>
                   </div>
                </div>
                <div class="footer__logo">
