@@ -1,3 +1,33 @@
+.header {
+   &__container {}
+
+   &__menu {
+      .menu__body {
+         .menu__list {
+            .menu__item {
+               .menu__link {}
+            }
+         }
+      }
+
+      .menu__icon {}
+   }
+
+   &__logo {
+      svg {}
+   }
+
+   &__actions {
+      div {}
+
+      &__item {}
+
+      &__button {
+         button {}
+      }
+   }
+}
+
 //Burger
 
 .icon-menu {
