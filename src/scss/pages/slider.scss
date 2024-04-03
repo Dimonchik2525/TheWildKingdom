@@ -1,21 +1,164 @@
 .hero {
-   &__container {}
+   position: relative;
+   z-index: 2;
 
-   &__block {}
-
-   &__text {
-      &__title {}
-
-      &__button {}
+   &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
    }
 
-   &__slider__wrapper {}
+   &__container {
+      position: relative;
+      z-index: 2;
+   }
 
-   &__slider {}
+   &__block {
+      display: grid;
+      grid-template-columns: 27.79% 44.402% 1fr;
+      align-items: center;
+   }
+
+   &__text {
+      position: relative;
+      z-index: 2;
+      margin-right: -47.1557%;
+
+      &__title {
+         font-family: "Italiana";
+         @include adaptiveValue("font-size", 100, 26);
+         line-height: 100%;
+         text-transform: capitalize;
+         color: $secondGold;
+         @include adaptiveValue("padding-bottom", 35, 15);
+
+      }
+
+      &__button {
+         border: rem(1) solid $secondGold;
+         border-radius: 50px;
+         @include adaptiveValue("width", 137, 75);
+         @include adaptiveValue("height", 46, 25);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         button {
+            font-weight: 300;
+            line-height: 156%;
+            text-align: center;
+            color: $secondGold;
+            @include adaptiveValue("font-size", 16, 14);
+         }
+      }
+   }
+
+   &__slider__wrapper {
+      @include adaptiveValue("padding-top", 78, 30);
+      overflow: hidden;
+      //padding-bottom: rem(20);
+   }
+
+   &-mini__slider__wrapper {
+      @include adaptiveValue("margin-left", 49, 7);
+      @include adaptiveValue("padding-top", 78, 30);
+      overflow: hidden;
+
+      @media (max-width:1600px) {
+         max-width: rem(260);
+      }
+
+      @media (max-width:1050px) {
+         max-width: rem(130);
+      }
+
+   }
+
+   &__slider.swiper {
+      max-height: rem(698);
+      border-radius: 100%;
+      overflow: visible;
+   }
+
+   &-mini__slider.swiper {
+      max-height: rem(117.4);
+      max-width: rem(117.4);
+      border-radius: 100%;
+      overflow: visible;
+      transform: translate(rem(-133), 0);
+
+      @media (max-width:500px) {
+         transform: translate(-109%, 0);
+      }
+   }
 
    &__wrapper {}
 
+   &-mini__wrapper {}
+
    &__slide {
-      img {}
+      /*max-width: rem(650);
+      max-height: rem(650);*/
+      @include adaptiveValue("padding", 24, 14);
+      border-radius: 100%;
+      border: rem(1) solid $secondGold;
+      position: relative;
+      text-align: center;
+
+      &__img {
+         border-radius: 100%;
+         background-color: black;
+         overflow: hidden;
+         aspect-ratio: 1/1;
+
+         .bigDog__img {
+            margin-top: -8.76%;
+            max-width: 100%;
+         }
+
+         .smallDog__img {
+            position: absolute;
+            @include adaptiveValue("top", -30, 7);
+            @include adaptiveValue("left", 28, 14);
+            @include adaptiveValue("max-width", 648, 99.4);
+         }
+      }
+
+   }
+
+   &-mini__slide {
+      @include adaptiveValue("padding", 4, 2);
+      border-radius: 100%;
+      border: rem(1) solid $secondGold;
+      position: relative;
+      text-align: center;
+
+      &__img {
+         border-radius: 100%;
+         background-color: black;
+         overflow: hidden;
+         aspect-ratio: 1/1;
+
+         .bigDog-mini__img {
+            margin-top: -8.76%;
+            max-width: 100%;
+         }
+
+         .smallDog-mini__img {
+            position: absolute;
+            //@include adaptiveValue("top", -50, 7);
+            top: rem(-5);
+            @include adaptiveValue("left", 4, 2);
+            @include adaptiveValue("max-width", 107.4, 110.83, 1700, 505, 1);
+
+            @media (max-width:505px) {
+               @include adaptiveValue("max-width", 110.4, 65.4, 504, 320, 1);
+            }
+         }
+      }
    }
 }
