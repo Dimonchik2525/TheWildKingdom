@@ -4,7 +4,7 @@
 
    &__bg {
       position: absolute;
-      top: 0;
+      @include adaptiveValue("top", -154.4, -118.4);
       left: 0;
       width: 100%;
       height: 100%;
@@ -21,6 +21,7 @@
       display: grid;
       grid-template-columns: 27.79% 44.402% 1fr;
       align-items: center;
+      position: relative;
    }
 
    &__text {
@@ -46,6 +47,8 @@
          display: flex;
          align-items: center;
          justify-content: center;
+         transition: all 0.8s ease 0s;
+         cursor: pointer;
 
          button {
             font-weight: 300;
@@ -53,12 +56,25 @@
             text-align: center;
             color: $secondGold;
             @include adaptiveValue("font-size", 16, 14);
+            transition: all 0.8s ease 0s;
+            background-color: transparent;
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: $secondGold;
+
+               button {
+                  color: white;
+               }
+            }
          }
       }
    }
 
    &__slider__wrapper {
-      @include adaptiveValue("padding-top", 78, 30);
+      @include adaptiveValue("padding-top", 112, 30);
+      @include adaptiveValue("padding-bottom", 156, 30);
       overflow: hidden;
       //padding-bottom: rem(20);
    }
@@ -161,4 +177,39 @@
          }
       }
    }
+
+   .hero__slider__controll {
+      display: flex;
+      @include adaptiveValue("column-gap", 30, 10);
+      position: relative;
+      z-index: 2;
+      position: absolute;
+      right: 0;
+      bottom: 10.55%;
+
+      svg {
+         transition: all 0.8s ease 0s;
+         cursor: pointer;
+         fill: $secondGold;
+         width: rem(34);
+         height: rem(16);
+         @include adaptiveValue("width", 34, 24, 700, 320, 1);
+         @include adaptiveValue("height", 16, 10, 700, 320, 1);
+      }
+
+      &__left {
+         &:hover {
+            transform: scale(1.6);
+         }
+      }
+
+      &__right {
+         &:hover {
+            transform: scale(-1.6);
+         }
+
+         transform: scale(-1)
+      }
+   }
+
 }

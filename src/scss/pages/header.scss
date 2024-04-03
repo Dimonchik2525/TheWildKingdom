@@ -1,4 +1,7 @@
 .header {
+   position: relative;
+   z-index: 3;
+
    &__container {
       display: flex;
       justify-content: space-between;
@@ -6,7 +9,7 @@
       column-gap: rem(20);
       @include adaptiveValue("padding-top", 37, 15);
       @include adaptiveValue("padding-bottom", 37, 15);
-      background-color: #df5050;
+      //background-color: #df5050;
       flex-wrap: wrap;
    }
 
@@ -35,6 +38,12 @@
 
                   @media (max-width:800px) {
                      font-weight: 800;
+                  }
+
+                  @media (any-hover: hover) {
+                     &:hover {
+                        text-decoration: underline;
+                     }
                   }
                }
             }
@@ -77,16 +86,23 @@
          @include adaptiveValue("padding-right", 50, 35, 800, 320, 1);
       }
 
-      div,
+      a,
       button {
          font-weight: 300;
          line-height: 156%;
          color: $secondGold;
       }
 
-      &__item {}
+      &__item {
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
 
       &__button {
+         cursor: pointer;
          border: rem(1) solid $secondGold;
          border-radius: 50px;
          @include adaptiveValue("width", 137, 100);
@@ -94,9 +110,17 @@
          display: flex;
          align-items: center;
          justify-content: center;
+         transition: all 0.8s ease 0s;
 
          button {
             line-height: 156%;
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: $secondGold;
+               color: white;
+            }
          }
       }
    }

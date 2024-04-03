@@ -47,6 +47,22 @@
          &__mainText {}
 
          &__button {
+            cursor: pointer;
+
+            &::before {
+               content: '';
+               transition: all 0.8s ease 0s;
+            }
+
+            @media (any-hover: hover) {
+               &:hover {
+                  &::before {
+                     content: '';
+                     opacity: 1;
+                  }
+               }
+            }
+
             button {}
          }
       }
@@ -424,6 +440,7 @@
          @include adaptiveValue("padding-top", 52, 25);
          display: flex;
          justify-content: space-between;
+         align-items: center;
          column-gap: rem(10);
 
          &__title {
@@ -431,13 +448,26 @@
             color: $goldColor;
             @include adaptiveValue("font-size", 32, 20);
             line-height: math.div(38, 32);
+
+            @media (any-hover: hover) {
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
          }
 
          &__arrow {
+            transition: all 0.8s ease 0s;
             fill: $goldColor;
             width: rem(53);
             height: rem(24);
             transform: scale(-1);
+
+            @media (any-hover: hover) {
+               &:hover {
+                  transform: scale(-1.3);
+               }
+            }
          }
       }
    }
@@ -506,6 +536,8 @@
          border: rem(1) solid $secondGold;
          border-radius: 100%;
          transform: translateY(50%);
+         cursor: pointer;
+         transition: all 0.8s ease 0s;
 
          &__wrapper {
             position: relative;
@@ -517,9 +549,11 @@
             border-radius: 100%;
             overflow: hidden;
             background-color: #efe9dd;
+            transition: all 0.8s ease 0s;
 
             &::before {
                content: '';
+               transition: all 0.8s ease 0s;
                position: absolute;
                top: 0;
                left: 0;
@@ -535,6 +569,24 @@
                fill: #222220;
                @include adaptiveValue("width", 45, 28);
                @include adaptiveValue("width", 50, 25);
+               transition: all 0.8s ease 0s;
+            }
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               transform: translateY(50%) scale(0.9);
+
+               .contacts__images__button__wrapper {
+                  &::before {
+                     content: '';
+                     opacity: 1;
+                  }
+
+                  svg {
+                     fill: #e6d2a8;
+                  }
+               }
             }
          }
       }
@@ -543,6 +595,19 @@
    &__text {
       @include adaptiveValue("margin-top", -22, 0, 1572, 700, 1);
       max-width: rem(485);
+
+      a,
+      address {
+         transition: all 0.5s ease 0s;
+         cursor: pointer;
+
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+               color: #c7bca8;
+            }
+         }
+      }
 
       &__title {}
 
@@ -581,6 +646,24 @@
 
             &:not(:last-child) {
                padding-bottom: rem(6);
+            }
+         }
+      }
+
+      &__button {
+         cursor: pointer;
+
+         &::before {
+            content: '';
+            transition: all 0.8s ease 0s;
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               &::before {
+                  content: '';
+                  opacity: 1;
+               }
             }
          }
       }

@@ -152,10 +152,10 @@ function initSliders() {
 			*/
 
 			// Кнопки "влево/вправо"
-			/*navigation: {
-				prevEl: '.quotes__slider__controll__left',
-				nextEl: '.quotes__slider__controll__right',
-			},*/
+			navigation: {
+				prevEl: '.hero__slider__controll__left',
+				nextEl: '.hero__slider__controll__right',
+			},
 
 			// Брейкпоинты
 			/*
