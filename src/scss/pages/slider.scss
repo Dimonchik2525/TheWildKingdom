@@ -1,0 +1,21 @@
+.hero {
+   &__container {}
+
+   &__block {}
+
+   &__text {
+      &__title {}
+
+      &__button {}
+   }
+
+   &__slider__wrapper {}
+
+   &__slider {}
+
+   &__wrapper {}
+
+   &__slide {
+      img {}
+   }
+}
