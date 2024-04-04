@@ -9,15 +9,15 @@
 
 <body>
    <div class="wrapper">
-      <header id="home" class="header">
+      <header data-scroll="30" class="header">
          <div class="header__container">
             <div class="header__menu menu">
                <nav class="menu__body">
                   <ul class="menu__list">
-                     <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">About</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Products</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Services</a></li>
+                     <li class="menu__item"><a data-goto="#home" href="" class="menu__link">Home</a></li>
+                     <li class="menu__item"><a data-goto="#about" href="" class="menu__link">About</a></li>
+                     <li class="menu__item"><a data-goto="#products" href="" class="menu__link">Products</a></li>
+                     <li class="menu__item"><a data-goto="#services" href="" class="menu__link">Services</a></li>
                   </ul>
                </nav>
             </div>
@@ -35,7 +35,7 @@
          </div>
       </header>
       <main class="main">
-         <section class="hero">
+         <section id="home" class="hero">
             <div class="hero__container">
                <div class="hero__block">
                   <div class="hero__text">
@@ -128,7 +128,7 @@
             </div>
             <img src="img/slider/BG.png" class="hero__bg"></img>
          </section>
-         <section class="about">
+         <section id="about" class="about">
             <div class="about__container">
                <div class="about__block">
                   <div class="about__top">
@@ -179,7 +179,7 @@
                </div>
             </div>
          </section>
-         <section class="products">
+         <section id="products" class="products">
             <div class="products__container">
                <div class="products__block">
                   <div class="products__header pattern-block">
@@ -393,7 +393,7 @@
                </div>
             </div>
          </section>
-         <section class="services">
+         <section id="services" class="services">
             <div class="services__container">
                <div class="services__block">
                   <div class="services__img">
@@ -603,10 +603,10 @@
                <div class="footer__socials">
                   <a href="#" class="footer__socials__title">Sitemap</a>
                   <ul class="footer__socials__subtitles">
-                     <li class="footer__socials__subtitle"><a href="#">Home</a> </li>
-                     <li class="footer__socials__subtitle"><a href="#">About</a> </li>
-                     <li class="footer__socials__subtitle"><a href="#">Products</a> </li>
-                     <li class="footer__socials__subtitle"><a href="#">Services</a> </li>
+                     <li class="footer__socials__subtitle"><a data-goto="#home" href="#">Home</a> </li>
+                     <li class="footer__socials__subtitle"><a data-goto="#about" href="#">About</a> </li>
+                     <li class="footer__socials__subtitle"><a data-goto="#products" href="#">Products</a> </li>
+                     <li class="footer__socials__subtitle"><a data-goto="#services" href="#">Services</a> </li>
                   </ul>
                   <div class="footer__socials__img">
                      <a href="#">

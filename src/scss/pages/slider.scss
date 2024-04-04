@@ -4,7 +4,7 @@
 
    &__bg {
       position: absolute;
-      @include adaptiveValue("top", -154.4, -118.4);
+      @include adaptiveValue("top", -154, -100);
       left: 0;
       width: 100%;
       height: 100%;
@@ -22,6 +22,8 @@
       grid-template-columns: 27.79% 44.402% 1fr;
       align-items: center;
       position: relative;
+      @include adaptiveValue("padding-top", 234, 90);
+      @include adaptiveValue("padding-bottom", 156, 30);
    }
 
    &__text {
@@ -73,8 +75,7 @@
    }
 
    &__slider__wrapper {
-      @include adaptiveValue("padding-top", 112, 30);
-      @include adaptiveValue("padding-bottom", 156, 30);
+      @include adaptiveValue("padding-top", 30, 20);
       overflow: hidden;
       //padding-bottom: rem(20);
    }

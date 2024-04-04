@@ -1,16 +1,36 @@
 .header {
    position: relative;
    z-index: 3;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   transition: all 0.8s ease 0s;
+
+   &._header-scroll {
+      background-color: hsla(0, 1%, 24%, 0.6);
+      transition: all 0.8s ease 0s;
+      position: fixed;
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: #211c1c;
+      }
+   }
 
    &__container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       column-gap: rem(20);
-      @include adaptiveValue("padding-top", 37, 15);
-      @include adaptiveValue("padding-bottom", 37, 15);
-      //background-color: #df5050;
+      @include adaptiveValue("min-height", 154, 100);
       flex-wrap: wrap;
+      transition: all 0.8s ease 0s;
+
+      ._header-scroll & {
+         @include adaptiveValue("min-height", 125, 80);
+      }
    }
 
    &__menu {
@@ -33,6 +53,7 @@
 
                .menu__link {
                   font-weight: 300;
+                  position: relative;
                   line-height: 156%;
                   color: $secondGold;
 
@@ -54,7 +75,7 @@
             top: 0;
             left: -100%;
             width: 100%;
-            height: 100%;
+            height: 1000%;
             background-color: rgb(255, 241, 241);
             z-index: 4;
          }
@@ -142,7 +163,7 @@
       width: rem(30);
       height: rem(18);
       cursor: pointer;
-      z-index: 10;
+      z-index: 50;
 
       span,
       &::before,

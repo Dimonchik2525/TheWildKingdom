@@ -23,7 +23,7 @@ export function pageNavigation() {
 				const gotoLink = targetElement.closest('[data-goto]');
 				const gotoLinkSelector = gotoLink.dataset.goto ? gotoLink.dataset.goto : '';
 				const noHeader = gotoLink.hasAttribute('data-goto-header') ? true : false;
-				const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
+				const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 700;
 				const offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
 				gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
 				e.preventDefault();
