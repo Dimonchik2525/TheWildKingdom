@@ -438,6 +438,8 @@
       &__img {
 
          img {
+            object-fit: cover;
+            object-position: center;
             width: 100%;
          }
       }
